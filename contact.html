@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Zakariya Mustafe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Optional: Add some styling for the thank you message */
+        .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: rgb(2, 40, 2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            <input type="submit" value="Submit" class="submit-button">
+
+        </form>
+
+        <div class="thank-you-message" id="thankYouMessage">
+            Thank you for completing the form!
+        </div>
+
+        <h3>Location</h3>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9932.470280856112!2d-0.117148!3d51.511059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b5f3c46771%3A0x439ecc438a580a1!2sSomerset%20House!5e0!3m2!1sen!2suk!4v1729889992431!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zakariya Mustafe</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // You can add logic here to send the form data via AJAX if needed
+
+            // Show the thank-you message
+            document.getElementById('thankYouMessage').style.display = 'block';
+            // Optionally, hide the form after submission
+            this.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
